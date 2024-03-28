@@ -1,6 +1,6 @@
 # Rate Limit Core Function Explanation
 
-## Task 1:
+## 1: Coding
 
 ### How it works:
 
@@ -12,11 +12,11 @@ The rate limit core function aims to restrict the number of requests a client ca
 4. If the number of requests made within the last hour exceeds the rate limit (R), the function rejects the incoming request.
 5. Otherwise, the function accepts the request and updates the list of recent request timestamps.
 
-## Task 2: Using Redis to Scale API Gateway
+## 2: Design
 
 ### How it works:
 
-To scale the API gateway and handle rate limiting efficiently, Redis is introduced as a caching solution. Here's how it works with Redis:
+To scale the API gateway and handle rate limiting efficiently, i using Redis as a caching solution. Here's how it works with Redis:
 
 1. A Redis Sorted Set named "requests" is used to store the timestamps of recent requests.
 2. Each incoming request adds its timestamp to the "requests" Sorted Set.
